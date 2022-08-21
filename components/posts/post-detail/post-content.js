@@ -40,7 +40,6 @@ const PostContent = (props) => {
       return <p>{paragraph.children}</p>
     },
     code(code) {
-      console.log(code);
       const { className, children } = code;
       const languageFormat = className.split('-');
       return (
