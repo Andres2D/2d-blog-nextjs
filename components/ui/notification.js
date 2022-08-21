@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import styles from './notification.module.css';
+import classes from './notification.module.css';
 
 function Notification(props) {
   const { title, message, status } = props;
@@ -18,8 +18,8 @@ function Notification(props) {
 
   return (
     <div className={cssClasses}>
-      <h2 className={styles.title}>{title}</h2>
-      <p className={styles.subtitle}>{message}</p>
+      <h2 className={classes.title}>{title}</h2>
+      <p className={classes.subtitle}>{message}</p>
     </div>
   );
 }
