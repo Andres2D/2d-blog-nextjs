@@ -1,4 +1,6 @@
 import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighLighter } from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import Image from 'next/image';
 import PostHeader from './post-header';
 import styles from './post-content.module.css';
@@ -36,6 +38,19 @@ const PostContent = (props) => {
       }
 
       return <p>{paragraph.children}</p>
+    },
+    code(code) {
+      console.log(code);
+      const { className, children } = code;
+      const languageFormat = className.split('-');
+      return (
+        <SyntaxHighLighter 
+          style={atomDark}
+          language={languageFormat[languageFormat.length - 1]}
+        >
+          {children}
+        </SyntaxHighLighter>
+      )
     }
   };
 
