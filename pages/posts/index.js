@@ -1,9 +1,19 @@
+import Head from 'next/head';
 import AllPosts from '../../components/posts/all-posts';
 import { getAllPosts } from '../../lib/post-util';
 
 const AllPostsPage = (props) => {
   return (
-    <AllPosts posts={props.posts} />
+    <>
+      <Head>
+        <title>All Posts</title>
+        <meta 
+          name='description'
+          content='A list of all my available posts'
+        />
+      </Head>
+      <AllPosts posts={props.posts} />
+    </>
   );
 };
 
