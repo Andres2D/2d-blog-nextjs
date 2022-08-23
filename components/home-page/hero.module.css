@@ -16,6 +16,7 @@
   overflow: hidden;
   background-color: var(--color-grey-700);
   margin: auto;
+  border: 8px solid var(--color-grey-300);
 }
 
 .image {
