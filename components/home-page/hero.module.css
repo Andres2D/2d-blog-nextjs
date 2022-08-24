@@ -6,6 +6,11 @@
     var(--color-grey-800)
   );
   padding: var(--size-8) 0;
+  display: flex;
+  padding-bottom: 0;
+  flex-direction: column;
+  border-bottom-left-radius: 250px;
+  border-bottom-right-radius: 250px;
 }
 
 .container {
@@ -38,4 +43,26 @@
   width: 90%;
   max-width: 40rem;
   margin: auto;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  margin: 5px;
+}
+
+.icon {
+  border: 2px solid var(--color-grey-300) !important;
+  border-radius: 50%;
+}
+
+@media (max-width: 788px) {
+  .hero {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
 }
