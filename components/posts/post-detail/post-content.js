@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighLighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+//coldarkDark, a11yDark, dracula
 import Image from 'next/image';
 import PostHeader from './post-header';
 import styles from './post-content.module.css';
@@ -30,8 +31,8 @@ const PostContent = (props) => {
             <Image
               src={`/images/posts/${post.slug}/${image.properties.src}`}
               alt={image.alt}
-              width={526 }
-              height={ 336}
+              width={526}
+              height={336}
             />
           </div>  
         );
@@ -44,7 +45,7 @@ const PostContent = (props) => {
       const languageFormat = className.split('-');
       return (
         <SyntaxHighLighter 
-          style={atomDark}
+          style={a11yDark}
           language={languageFormat[languageFormat.length - 1]}
         >
           {children}
