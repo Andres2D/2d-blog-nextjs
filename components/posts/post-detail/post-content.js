@@ -42,15 +42,25 @@ const PostContent = (props) => {
     },
     code(code) {
       const { className, children } = code;
-      const languageFormat = className.split('-');
-      return (
-        <SyntaxHighLighter 
-          style={a11yDark}
-          language={languageFormat[languageFormat.length - 1]}
-        >
-          {children}
-        </SyntaxHighLighter>
-      )
+      if(className) {
+        const languageFormat = className.split('-');
+        return (
+          <SyntaxHighLighter 
+            style={a11yDark}
+            language='ts'
+            showLineNumbers
+            wrapLines
+          >
+            {children}
+          </SyntaxHighLighter>
+        )
+      }else{
+        return (
+          <code className={styles.codeLabel}>
+            {children}
+          </code>
+        );
+      }
     }
   };
 
