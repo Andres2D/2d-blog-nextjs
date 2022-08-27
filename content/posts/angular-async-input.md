@@ -158,11 +158,10 @@ ngOnInit(): void {
 ## Summary
 Well, that's all folks.
 We learn how to create an async input in Angular using subscription operators.
-You can find the [repository](https://github.com/Andres2D/async-input-angular) with all this code implemented.
+You can find the [repository](https://github.com/Andres2D/berserk-angular/tree/async-input) with all this code implemented.
 
 Please go to the 'contact' section if you have any input about this article.
 Happy Coding.
-
 
 References:
 * [debounceTime](https://rxjs.dev/api/operators/debounceTime)
