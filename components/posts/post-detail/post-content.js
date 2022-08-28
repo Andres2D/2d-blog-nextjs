@@ -25,14 +25,28 @@ const PostContent = (props) => {
     p(paragraph) {
       const { node } = paragraph;
       if(node.children[0].tagName === 'img') {
-        const image = node.children[0];
+        const { alt, properties } = node.children[0];
+        let imagePath = '';
+        let imgWidth = 526;
+        let imgHeight = 336;
+        
+        if(properties.src.includes('=')) {
+          const [path, size] = properties.src.split('=');
+          const [width, height] = size.split('x');
+          imagePath = path;
+          imgWidth = +width;
+          imgHeight = +height;
+        }else{
+          imagePath = properties.src;
+        }
+
         return (
           <div className={styles.image}>
             <Image
-              src={`/images/posts/${post.slug}/${image.properties.src}`}
-              alt={image.alt}
-              width={526}
-              height={336}
+              src={`/images/posts/${post.slug}/${imagePath}`}
+              alt={alt}
+              width={imgWidth}
+              height={imgHeight}
             />
           </div>  
         );
