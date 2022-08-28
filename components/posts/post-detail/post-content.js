@@ -47,8 +47,8 @@ const PostContent = (props) => {
         return (
           <SyntaxHighLighter 
             style={a11yDark}
-            language='ts'
-            showLineNumbers
+            language={languageFormat[1]}
+            showLineNumbers={languageFormat[1] === 'console' ? false : true}
             wrapLines
           >
             {children}
