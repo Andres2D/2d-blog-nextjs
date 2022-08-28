@@ -11,3 +11,9 @@
     font-size: var(--size-9);
   }
 }
+
+@media (max-width: 425px) {
+  .logo {
+    font-size: var(--size-5);
+  }
+}
