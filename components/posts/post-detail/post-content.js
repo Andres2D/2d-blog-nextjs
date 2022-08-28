@@ -1,7 +1,14 @@
 import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighLighter } from 'react-syntax-highlighter';
-import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-//coldarkDark, a11yDark, dracula
+import { PrismLight as SyntaxHighLighter } from 'react-syntax-highlighter';
+import a11yDark from 'react-syntax-highlighter/dist/cjs/styles/prism/a11y-dark';
+import ts from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript';
+import markup from 'react-syntax-highlighter/dist/cjs/languages/prism/markup';
+import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
+
+SyntaxHighLighter.registerLanguage('ts', ts);
+SyntaxHighLighter.registerLanguage('markup', markup);
+SyntaxHighLighter.registerLanguage('bash', bash);
+
 import Image from 'next/image';
 import PostHeader from './post-header';
 import styles from './post-content.module.css';
@@ -62,7 +69,7 @@ const PostContent = (props) => {
           <SyntaxHighLighter 
             style={a11yDark}
             language={languageFormat[1]}
-            showLineNumbers={languageFormat[1] === 'console' ? false : true}
+            showLineNumbers={languageFormat[1] === 'bash' ? false : true}
             wrapLines
           >
             {children}

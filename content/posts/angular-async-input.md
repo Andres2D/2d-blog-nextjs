@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
 
 Finally, let's render the component
 
-```ts
+```markup
 <div class="container">
   <input 
     class="big-input"
@@ -83,7 +83,7 @@ control created in the `app.component.ts` file.
 
 And when we type in the input, we can see the result on the console, something like this
 
-```console
+```bash
 a
 an
 and
@@ -130,7 +130,7 @@ Also, we are setting the `debounceTime` with a time of `2000`, which means 2 sec
 
 Eventually, if we try to fill the input again with the word 'andres' after 2 seconds, we will see in the console:
 
-```console
+```bash
 andres
 ```
 a single log.

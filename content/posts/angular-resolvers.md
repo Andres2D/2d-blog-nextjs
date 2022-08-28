@@ -28,7 +28,7 @@ In this example, I'll be using a main page with a button that redirects to anoth
 
 First, we need to create a new resolver in our Angular application.
 Run the following command:
-```console
+```bash
 $ ng n resolver article
 ```
 
@@ -139,7 +139,7 @@ because we name it article in the routing configuration.
 
 Finally, we only need to render the content of our page in the `fake-page.component.html` file:
 
-```html
+```markup
 <section class="container">
   <h1>{{article?.title}}</h1>
   <article class="article">
