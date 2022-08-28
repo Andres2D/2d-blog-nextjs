@@ -6,23 +6,23 @@ excerpt: Using resolvers in angular. Loading content first approach.
 isFeatured: true
 ---
 
-Lest's explain how to use a resolver with a basic Angular application.
+Let's explain how to use a resolver with a basic Angular application.
 
 ## What's the matter?
-Well, frequently our pages get the content from an API and the API response takes a time.
-Therefore, we are forced to use a loading page or spinner meanwhile the data it's completely resolved.
+Well, frequently our pages get the content from an API, and the API response takes some time.
+Therefore, we are forced to use a loading page or spinner while the data is completely resolved.
 
 However, there is another way to handle this behavior.
 
 ## Using resolvers
-Angular has this amazing feature called `resolver` which help us to handle the time between the redirection to a page
+Angular has this amazing feature called `resolver` which helps us to handle the time between the redirection to a page
 and the resolution of the necessary data to render the page.
 
-Angular prevent the load of the page until the data it's completely resolved. Thus, our component always it's first rendered with
+Angular prevents the load of the page until the data is completely resolved. Thus, our component is always first rendered with
 all the data.
 
-## Let's see it in action
-In this example, I'll be using a main page with a button which redirects to another page with fake content.
+## Let's see it in action.
+In this example, I'll be using a main page with a button that redirects to another page with fake content.
 
 ![Basic redirect](gif-initial.gif)
 
@@ -32,7 +32,7 @@ Run the following command:
 $ ng n resolver article
 ```
 
-Then, the new resolver should looks like this
+Then, the new resolver should look like this
 
 ```ts
 import { Injectable } from '@angular/core';
@@ -55,7 +55,7 @@ export class ResolverResolver implements Resolve<boolean> {
 ```
 As you can see, it's just a service class which implements a `Resolve` class with the resolve `method`.
 By default, the resolve is of type `Observable`. But, you could return a `Promise` too.
-In addition, the resolve method has the `route` and `state` parameters in case that you need use them.
+In addition, the resolve method has the `route` and `state` parameters in case you need to use them.
 For example, to get a param id or get the current state.
 
 However, we don't need to use them. So, replace the code with:
@@ -78,13 +78,13 @@ export class ArticleResolver implements Resolve<Article> {
   }
 }
 ```
-This example, it's quite more simple, we get rid of all the useless imports.
-And, we are returning and `Observable` with the `of` operator with a mock data
+In this example, it's quite simple. We get rid of all the useless imports.
+And, we are returning and `Observable` with the `of` operator with a mock data set 
 that contains an object with `{title: string; content: string; author: string}`.
-But, in a real application you should return the API request.
+But, in a real application, you should return the API request.
 
-Also, we are using yje `pipe` and the `delay` operators to simulate a slow request to the backend
-in order to show you how the new page wouldn't be rendered until this resolve finished.
+Also, we are using the `pipe` and the `delay` operators to simulate a slow request to the backend
+in order to show you how the new page wouldn't be rendered until this resolve is finished.
 
 
 Now, let's utilize this new resolver.
@@ -110,10 +110,10 @@ const routes: Routes = [
   }
 ];
 ```
-In short, we are only adding a `resolve` property in the `fake-page` configuration which it's just
-and object with any name, in this case `article`, with the our resolve class.
+In short, we are only adding a `resolve` property in the `fake-page` configuration, which it's just
+with our resolve class in and object with any name, in this case article
 
-Now, if we try no navigate to `localhost:4200/fake-page`, this redirection should take 2 seconds. Because of the `delay(2000)`.
+Now, if we try to navigate to `localhost:4200/fake-page`, this redirection should take 2 seconds. Due to the `delay(2000)`.
 
 ![Basic redirect](gif-second.gif)
 
@@ -132,7 +132,7 @@ export class FakePageComponent implements OnInit {
   }
 }
 ```
-To achieve this, we need to inject `ActivatedRoute` because is in this class where our resolved data lives.
+To achieve this, we need to inject `ActivatedRoute` because it is in this class where our resolved data lives.
 
 And, in order to get the resolved data, we can destructure it from `const { article } = this.activatedRoute.snapshot.data;` 
 because we name it article in the routing configuration.
@@ -154,5 +154,10 @@ And this should be the final behavior.
 ![Basic redirect](gif-final.gif=560x732)
 
 ## Summary
-We just learn how to implement the resolve Class in a simple Angular application.
-We learn, that we only prevent the new page to be redirected until the asynchronous data is resolved.
+We just learned how to implement the resolve Class in a simple Angular application.
+We learn, that we only prevent the new page from being redirected until the asynchronous data is resolved.
+You can find the repository of this example in [here](https://github.com/Andres2D/berserk-angular/tree/resolver).
+
+References:
+* [resolver](https://angular.io/api/router/Resolve)
+* [delay](https://rxjs.dev/api/operators/delay)
