@@ -4,10 +4,12 @@ import a11yDark from 'react-syntax-highlighter/dist/cjs/styles/prism/a11y-dark';
 import ts from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript';
 import markup from 'react-syntax-highlighter/dist/cjs/languages/prism/markup';
 import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
+import scss from 'react-syntax-highlighter/dist/cjs/languages/prism/scss';
 
 SyntaxHighLighter.registerLanguage('ts', ts);
 SyntaxHighLighter.registerLanguage('markup', markup);
 SyntaxHighLighter.registerLanguage('bash', bash);
+SyntaxHighLighter.registerLanguage('scss', scss);
 
 import Image from 'next/image';
 import PostHeader from './post-header';
