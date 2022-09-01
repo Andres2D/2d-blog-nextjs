@@ -5,11 +5,13 @@ import ts from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript';
 import markup from 'react-syntax-highlighter/dist/cjs/languages/prism/markup';
 import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
 import scss from 'react-syntax-highlighter/dist/cjs/languages/prism/scss';
+import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
 
 SyntaxHighLighter.registerLanguage('ts', ts);
 SyntaxHighLighter.registerLanguage('markup', markup);
 SyntaxHighLighter.registerLanguage('bash', bash);
 SyntaxHighLighter.registerLanguage('scss', scss);
+SyntaxHighLighter.registerLanguage('jsx', jsx);
 
 import Image from 'next/image';
 import PostHeader from './post-header';
