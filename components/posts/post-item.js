@@ -8,7 +8,8 @@ const PostItem = (props) => {
     date,
     excerpt,
     image,
-    slug
+    slug,
+    technologies
   } = props.post;
 
   const formattedDate = new Date(date).toLocaleDateString('en-US', {
@@ -19,6 +20,24 @@ const PostItem = (props) => {
 
   const imagePath = `/images/posts/${slug}/${image}`;
   const linkPath = `/posts/${slug}`;
+  const techIcons = technologies.split(',');
+
+  const technologiesIcons = techIcons.map(tech => {
+    return (
+      <div
+        className={styles.iconTech}
+        key={tech}
+      >
+        <Image 
+          src={`/images/site/${tech}.svg`}
+          title={tech}
+          alt={tech}
+          width={35}
+          height={35}
+        />
+      </div>
+    );
+  }); 
 
   return (
     <li className={styles.post}>
@@ -38,6 +57,9 @@ const PostItem = (props) => {
             <h3 className={styles.title}>{title}</h3>
             <time className={styles.time}>{formattedDate}</time>
             <p className={styles.description}>{excerpt}</p>
+          </div>
+          <div className={styles.techs}>
+            { technologiesIcons }
           </div>
         </a>
       </Link>

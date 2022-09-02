@@ -3,6 +3,7 @@ title: 'Customizing an avatar with React'
 date: '2022-08-31'
 image: react-custom-avatar.png
 excerpt: Customize your own avatar with React.
+technologies: 'react'
 isFeatured: true
 ---
 
