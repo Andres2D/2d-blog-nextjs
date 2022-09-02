@@ -3,6 +3,7 @@ title: 'Using resolvers in Angular'
 date: '2022-08-27'
 image: angular-resolvers.png
 excerpt: Using resolvers in angular. Loading content first approach.
+technologies: 'angular'
 isFeatured: true
 ---
 

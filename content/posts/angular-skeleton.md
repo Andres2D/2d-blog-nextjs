@@ -3,6 +3,7 @@ title: 'Using skeletons in Angular'
 date: '2022-08-27'
 image: angular-skeleton.png
 excerpt: Using skeleton for async content. Second approach.
+technologies: 'angular'
 isFeatured: true
 ---
 
