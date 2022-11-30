@@ -4,7 +4,7 @@ date: '2022-08-27'
 image: angular-resolvers.png
 excerpt: Using resolvers in angular. Loading content first approach.
 technologies: 'angular'
-isFeatured: true
+isFeatured: false
 ---
 
 Let's explain how to use a resolver with a basic Angular application.
