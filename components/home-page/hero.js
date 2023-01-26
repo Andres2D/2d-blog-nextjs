@@ -7,7 +7,7 @@ const Hero = () => {
     <section className={styles.hero}>
       <div className={styles.container}>
         <Image 
-          src='/images/site/2D-2.jpeg'
+          src='/images/site/2d.png'
           alt='An image showing Andres'
           width={400}
           height={400}
