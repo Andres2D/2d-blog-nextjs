@@ -4,7 +4,7 @@ date: '2022-08-27'
 image: angular-skeleton.png
 excerpt: Using skeleton for async content. Second approach.
 technologies: 'angular'
-isFeatured: true
+isFeatured: false
 ---
 
 In the last [post](https://2d-blog-nextjs.vercel.app/posts/angular-resolvers), we learned how to use resolvers to load asynchronous content in a simple application.
