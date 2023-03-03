@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getDateFromString } from '../../helpers/date';
 import styles from './post-item.module.css';
 
 const PostItem = (props) => {
@@ -12,7 +13,7 @@ const PostItem = (props) => {
     technologies
   } = props.post;
 
-  const postDate = new Date(date.slice(0, 4), date.slice(5, 7), date.slice(8, 10));
+  const postDate = getDateFromString(date);
 
   const formattedDate = new Date(postDate).toLocaleDateString('en-US', {
     day: 'numeric',

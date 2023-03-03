@@ -16,23 +16,13 @@ SyntaxHighLighter.registerLanguage('jsx', jsx);
 import Image from 'next/image';
 import PostHeader from './post-header';
 import styles from './post-content.module.css';
+import PostFooter from './post-footer';
 
 const PostContent = (props) => {
   const { post } = props;
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
 
   const customComponent = {
-    // img(image) {
-    //   return (
-    //     <Image
-    //       className={styles.image}
-    //       src={`/images/posts/${post.slug}/${image.src}`}
-    //       alt={image.alt}
-    //       width={600}
-    //       height={300}
-    //     />
-    //   );
-    // },
     p(paragraph) {
       const { node } = paragraph;
       if(node.children[0].tagName === 'img') {
@@ -100,6 +90,12 @@ const PostContent = (props) => {
       >
         {post.content}
       </ReactMarkdown>
+      <PostFooter
+        author={post.author}
+        image={post.profile}
+        repository={post.gitHubRepository}
+        date={post.date}
+      />
     </article>
   );
 };
