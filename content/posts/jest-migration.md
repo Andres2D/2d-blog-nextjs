@@ -4,6 +4,9 @@ date: '2022-11-30'
 image: jest-migration.png
 excerpt: Migrate from Karma & Jasmine to Jest.
 technologies: 'angular,jest'
+author: 'Andres Alcaraz'
+profile: 'https://contrib.rocks/image?repo=andres2d/andres2d'
+gitHubRepository: 'https://github.com/Andres2D/angular-jest-migration'
 isFeatured: true
 ---
 

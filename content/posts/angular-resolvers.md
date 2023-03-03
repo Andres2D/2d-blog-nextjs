@@ -4,6 +4,9 @@ date: '2022-08-27'
 image: angular-resolvers.png
 excerpt: Using resolvers in angular. Loading content first approach.
 technologies: 'angular'
+author: 'Andres Alcaraz'
+profile: 'https://contrib.rocks/image?repo=andres2d/andres2d'
+gitHubRepository: 'https://github.com/Andres2D/berserk-angular/tree/resolver'
 isFeatured: false
 ---
 

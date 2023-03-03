@@ -4,6 +4,9 @@ date: '2022-08-27'
 image: angular-skeleton.png
 excerpt: Using skeleton for async content. Second approach.
 technologies: 'angular'
+author: 'Andres Alcaraz'
+profile: 'https://contrib.rocks/image?repo=andres2d/andres2d'
+gitHubRepository: 'https://github.com/Andres2D/berserk-angular/tree/skeletons'
 isFeatured: false
 ---
 

@@ -4,6 +4,9 @@ date: '2022-08-31'
 image: react-custom-avatar.png
 excerpt: Customize your own avatar with React.
 technologies: 'react'
+author: 'Andres Alcaraz'
+profile: 'https://contrib.rocks/image?repo=andres2d/andres2d'
+gitHubRepository: 'https://github.com/Andres2D/berserk-react/tree/custom-avatar'
 isFeatured: true
 ---
 

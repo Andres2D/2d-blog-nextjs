@@ -4,6 +4,9 @@ date: '2023-03-02'
 image: angular-custom-paginator.png
 excerpt: Creating a custom paginator in Angular.
 technologies: 'angular'
+author: 'Andres Alcaraz'
+profile: 'https://contrib.rocks/image?repo=andres2d/andres2d'
+gitHubRepository: 'https://github.com/Andres2D/berserk-angular/tree/paginator'
 isFeatured: true
 ---
 

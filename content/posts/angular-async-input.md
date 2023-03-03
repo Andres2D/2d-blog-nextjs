@@ -4,6 +4,9 @@ date: '2022-08-27'
 image: angular-async-input.png
 excerpt: Creating an async input with Angular and RXJS Observables.
 technologies: 'angular,rxjs'
+author: 'Andres Alcaraz'
+profile: 'https://contrib.rocks/image?repo=andres2d/andres2d'
+gitHubRepository: 'https://github.com/Andres2D/berserk-angular/tree/async-input'
 isFeatured: true
 ---
 
