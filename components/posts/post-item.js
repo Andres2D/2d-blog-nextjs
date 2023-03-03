@@ -12,7 +12,9 @@ const PostItem = (props) => {
     technologies
   } = props.post;
 
-  const formattedDate = new Date(date).toLocaleDateString('en-US', {
+  const postDate = new Date(date.slice(0, 4), date.slice(5, 7), date.slice(8, 10));
+
+  const formattedDate = new Date(postDate).toLocaleDateString('en-US', {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
