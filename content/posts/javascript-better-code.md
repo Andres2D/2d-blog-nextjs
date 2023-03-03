@@ -4,6 +4,9 @@ date: '2022-09-12'
 image: javascript-better-code.png
 excerpt: 5 javascript concepts to improve your code.
 technologies: 'javascript'
+author: 'Andres Alcaraz'
+profile: 'https://contrib.rocks/image?repo=andres2d/andres2d'
+gitHubRepository: 'https://github.com/Andres2D/berserk-javascript/blob/main/general/clean-code.js'
 isFeatured: true
 ---
 

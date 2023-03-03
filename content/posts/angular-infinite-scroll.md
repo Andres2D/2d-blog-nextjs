@@ -4,6 +4,9 @@ date: '2022-09-09'
 image: angular-infinite-scroll.png
 excerpt: Create a infinite scroll to load your content.
 technologies: 'angular'
+author: 'Andres Alcaraz'
+profile: 'https://contrib.rocks/image?repo=andres2d/andres2d'
+gitHubRepository: 'https://github.com/Andres2D/berserk-angular/tree/infinite-scroll'
 isFeatured: true
 ---
 
