@@ -1,6 +1,6 @@
 ---
 title: 'Angular custom paginator'
-date: '2023-02-27'
+date: '2023-03-02'
 image: angular-custom-paginator.png
 excerpt: Creating a custom paginator in Angular.
 technologies: 'angular'
