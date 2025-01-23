@@ -15,6 +15,9 @@ const HomePage = (props) => {
       </Head>
       <Hero />
       <FeaturedPosts posts={props.posts}/>
+      <footer>
+        Developed by Andres2D
+      </footer>  
     </>
   );
 };
